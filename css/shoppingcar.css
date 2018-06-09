@@ -1,0 +1,41 @@
+        #ul{
+			list-style-type: none;
+			width: 84%;
+		} 
+		#ul button{
+			float: right;
+		}
+		#shop{
+			border: 1px solid darkgray;
+    	    border-collapse:collapse;
+    	    }
+		#shop td{
+			 border:1px solid darkgray;
+   			 padding:7px;
+    		}
+    	.text_box{
+    		float: right;
+    		width: 30%;
+    		text-align: center;
+    	}
+		#add{
+			width: 30px;
+			margin-left: 10px;
+		}
+		#min{
+			width: 30px;
+		}
+		#dsn{
+			border: none;
+			width: 100%;
+			margin-top:20px;
+		}
+		#dsn td{
+			border: 0px;
+			padding: 3%;
+		}
+		#fr{
+				margin-top: 0px;
+				float: right;
+				margin-right: 50px;
+			}

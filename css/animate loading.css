@@ -1,0 +1,23 @@
+body {
+		width: 100%;
+		height: auto;
+		text-align:center;
+		background-image: url(../img/H58.jpg);
+		background-repeat: no-repeat;
+		background-size:100%;
+		
+		}
+p    {
+		font-size: 50px;
+		margin:5px;
+		padding:0;
+		font-family: arial;
+		color: white;
+		}
+div[id] {
+		width:200px; 
+		height:200px; 
+		margin:200px auto;
+		margin-top: 225px;
+		color: orangered;
+			}

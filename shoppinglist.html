@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/
+jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js"></script>
+		<script src="js/swiper-3.4.2.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/navbarscroll.js"></script>
+		<link  rel="stylesheet" href="css/index.css"/>
+	<body>
+<!--主题头部部分开始	-->
+	<div data-role="page">
+		<div data-role='header' data-position="fixed"   >
+			<div class="wrapper" id="wrap">
+			<div class="scroller">
+				<ul>
+					<li class="cur">天猫</li>
+					<li>聚划算</li>
+					<li>天猫国际</li>
+					<li>外卖</li>
+					<li>天猫超市</li>
+					<li>充值中心</li>
+					<li>飞猪旅行</li>
+					<li>领金币</li>
+					<li>拍卖</li>
+					<li>分类</li>
+				</ul>							
+			</div>
+		</div>
+		</div>
+<!--主体头部部分结束-->
+<!--主体内容部分开始-->
+		<div data-role='content'>
+<!--		轮播图部分-->
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><input  type="search" id="search" placeholder="精品时尚衣饰"style="width: 100%;"/></div>
+				<div class="ui-block-b"><button type="button" id="Search" style="float: right;height: 37.5px;font-size: 15px;">搜索</button></div>
+			</div>
+			<div class="swiper-container banner">
+    			<div class="swiper-wrapper">
+    				 <div class="swiper-slide"><img src="img/clo.jpg"/></div>
+       				 <div class="swiper-slide"><img src="img/clo1.jpg"/></div>
+        			 <div class="swiper-slide"><img src="img/clo2.jpg"/></div>
+        			 <div class="swiper-slide"><img src="img/clo5jpg.jpg"/></div>
+        			 <div class="swiper-slide"><img src="img/clo4jpg.jpg"/></div>
+        			 <div class="swiper-slide"><img src="img/clo3jpg.jpg"/></div>
+    			</div>
+<!-- 分页器 -->
+    			<div class="swiper-pagination banner"></div>
+				</div>
+			</div>
+<!--热点搜索	-->		
+		<div>
+			<p style="color: firebrick;">淘宝热搜：</p>
+			<div class="swiper-container case">
+    			<div class="swiper-wrapper">
+    				 <div class="swiper-slide">立领设计，简洁实用的设计螺纹工艺，细密可调节</div>
+       				 <div class="swiper-slide">螺纹袖口，完美贴合手腕线条，活动自如舒适</div>
+        			 <div class="swiper-slide">斜插口袋，休闲时尚，方便实用</div>
+        			 <div class="swiper-slide">大牌知性应季   优雅大翻领   立体的翻领大气得体优雅有型，打造时尚的名媛范 </div>
+        			 <div class="swiper-slide">简洁的翻领设计，休闲百搭，展现纤美的颈脖线条，优雅迷人</div>
+        			 <div class="swiper-slide">我的色彩，我做主，九分和彩裤的进行式</div>
+    			</div>
+		</div>	
+<!--获取的商品列表部分-->
+			<div id="goodList">
+				<ul id="goodul">	
+				</ul>
+			</div>
+<!--主体内容部分结束-->
+<!--主体结尾部分开始-->
+			<div data-role='footer' data-position="fixed"  data-theme="b">
+				<div data-role='navbar'>
+					<ul>
+						<li><a href="#" data-icon='home'class="ui-btn-active ui-stage-permit">首页</a></li>
+						<li><a href="#" data-icon='shop'>微淘</a></li>
+						<li><a href="#" data-icon='info'>消息</a></li>
+						<li><a href="shoppingcar.html" rel="external"  data-icon='grid'>购物车</a></li>
+						<li><a href="my app .html" rel="external" data-icon='plus'>我的淘宝</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+<!--主体结尾部分结束	-->
+</body>
+	<script>
+		$(function(){
+		$('.wrapper').navbarscroll();
+		})
+
+		$(document).ready(function(){
+		$.ajax({
+    		type:"get",
+    		url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+    		dataType:'jsonp',
+    		success:function(data){
+    		console.log(data);
+    		for (var i=0;i<data.length;i++) {
+    			$('#goodul').html($('#goodul').html()+'<li goods='+data[i].goodsID+'><img id="goodsimg" src='+data[i].goodsListImg
+    		+'><p>'+data[i].goodsName.slice(0,10) +'</p></li>');	
+    			}   				
+    				$('#goodul>li').on("click",function(){
+	 					var goodsid= this.getAttribute('goods');
+	 					window.location.href='detail.html#'+goodsid ;
+ 				    	});
+    				}
+    		   });
+    	$('#Search').click(function(){
+    		$.ajax({
+    			type:"get",
+    			url:"http://datainfo.duapp.com/shopdata/selectGoodes.php",
+    			dataType:'jsonp',
+    			data:{
+    				pageCode:0,
+    				linenumber:10,
+    				selectText:encodeURI($('#search').val())    				
+    			},
+    			success:function(data){
+    				$('#goodul').html(null);
+    				for (var i=0;i<data.length;i++) {
+    					$('#goodul').html($('#goodul').html()+'<li goods='+data[i].goodsID+'><img id="goodsimg" src='+data[i].goodsListImg
+    						+'><p>'+data[i].goodsName.slice(0,10) +'</p></li>');	
+    						}   				
+    						$('#goodul>li').on("click",function(){
+	 							var goodsid= this.getAttribute('goods');
+	 							window.location.href='detail.html#'+goodsid ;
+ 				    			});
+    				}
+    		});
+    	})
+
+		})
+		window.onload = function() {
+   			var mySwiper = $('.banner').swiper({ 
+    			loop: true,
+    			autoplay:5000,
+    			pagination: '.swiper-pagination'
+  				});
+  			var Swiper = $('.case').swiper({ 
+    			loop: true,
+    			autoplay:2000,
+  			})   		
+		}
+	</script>
+</html>

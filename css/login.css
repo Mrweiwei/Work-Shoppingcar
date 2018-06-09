@@ -1,0 +1,19 @@
+.ui-page-theme-b{
+		background-image: url(../img/H54.jpg);
+	 	color: darkblue;
+	 	background-size: 100%;
+	  	background-repeat: no-repeat;
+	}
+	#co{
+		margin-top: 0px;
+	}
+	h1{
+	  	margin-top: 0px;
+	  	padding-top: 30px;
+	  	text-align: center;
+	  	color: white;
+	  	font-family:fixedsys;
+	  }
+	  img{
+	  	background-size: 100%;
+	  }

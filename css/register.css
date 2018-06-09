@@ -1,0 +1,21 @@
+.ui-page-theme-f
+		{
+	 	background-image: url(../img/H54.jpg);
+	 	background-size: contain;
+	 	color: black;
+	 	background-size: 100%;
+	  	background-repeat: no-repeat;
+	 	}
+	  #b{
+	  background-color: palevioletred;
+	  }
+	  #input{
+	  	width: 80%;
+	  	margin-left: 10%;
+	  }
+	  #button{
+	  	margin-left: 29%;
+	  	width: 42%;
+	  	background-color:#f87b79 ;
+	  	color: white;
+	  }

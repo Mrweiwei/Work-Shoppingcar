@@ -1,0 +1,26 @@
+		#top{
+			height: 50px;
+			color: white;
+			line-height: 50px;
+			background-color: #fe1100;
+		}
+		#right{
+			float: right;
+			height: 50px;
+		}
+		#topb{
+			height: 120px;
+			background-color: #fe1100;
+		}
+		#bottom1{
+			color: gray;
+			background-color: white;
+		}
+		#bottom2{
+			color: gray;
+			background-color: white;
+		}
+		#mi{
+			margin-top: 0px;
+			border: solid;
+		}

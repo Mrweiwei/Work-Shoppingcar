@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+			<title>shoppingcar</title>		
+			<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+			<script src="js/jquery-2.2.2.js"></script>
+			<script src="js/jquery.mobile-1.4.5.min.js"></script>
+			<link rel="stylesheet" href="css/shoppingcar.css">
+		</head>
+		<body>
+			<div data-role='header' data-theme="b">
+				<h1>购物车</h1>
+				<button type="button" class="ui-btn-right" id="button" onclick="add()">管理</button>
+			</div>
+			<ul id="ul">				
+			</ul>
+			<div data-role='content'>
+				<table id="shop">	
+				</table>
+				<table id='dsn'>
+				<tr>
+				<!--<td style="width: 10%;padding-left: 0%;"><input type="checkbox" id="sa"/></td>
+				<td style="padding-top: 4%;padding-left: 2%;">全选</td>-->
+				<td style="color: red;width: 28%;float: right;padding-top: 8%;font-weight: bolder;">总价：<span id=all></span></td>
+				</tr>
+			</table>
+			</div>
+			<div data-role='footer' data-position="fixed"  data-theme="b">
+				<div data-role='navbar'>
+					<ul>
+						<li><a href="shoppinglist.html"rel="external" data-icon='home'>首页</a></li>
+						<li><a href="#" data-icon='shop'>微淘</a></li>
+						<li><a href="#" data-icon='info'>消息</a></li>
+						<li><a href="shoppingcar.html"rel="external" data-icon='grid' class="ui-btn-active ui-stage-permit">购物车</a></li>
+						<li><a href="my app .html"rel="external"  data-icon='plus'>我的淘宝</a></li>
+					</ul>
+				</div>
+			</div>
+		</body>
+	<script src="js/shoppingcar.js"></script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>register</title>		
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<script src="js/jquery-2.2.2.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="css/register.css" />
+		
+	</head>
+		
+<body>
+	<div data-role='page' id="page" data-theme="f">
+					<!--<h1>会员注册</h1>-->
+		<img src="img/logo.jpg" style="border-radius: 90px;width: 150px;height: 150px;margin-left: 120px;margin-top: 10px;"/>
+			<div data-role='content' id="content" >
+			  <div id="input">
+				<label for="text" class='ui-hidden-accessible'>昵称：</label>
+					<input type="text" id="text" name="text" placeholder="昵称："style="background-color: white; color: black;""/>
+					<input type="text" id="text2"name="text2"placeholder="账号："style="background-color: white; color: black;"/>
+				<form action="" method="post" name="my_f1">
+        			<p>
+            			<input type="password" required="true" name="passwd1" id="password" placeholder="请输入密码：" style="background-color: white; color: black;""/>
+        			</p>
+        			<p>
+            			<input type="password" required="true" name="passwd2"  id="password2" placeholder="请再次输入密码："style="background-color: white; color: black;"/>
+        			</p>
+        			<p>
+        				<div id="button">            		
+            			<input type="submit" value="注册" id="b"/>
+        				</div>
+        			</p>
+        		</form>
+            </div>
+        </div>   
+    </div>
+</body>
+<script src="js/register.js"></script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>detail</title>		
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+		<script src="js/jquery-2.2.2.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="css/detail.css" />
+	</head>
+	<body>
+		<div data-role='header'>
+		<div id="p">
+		</div>
+		</div>
+		<div data-role='content'>
+			<div id="price"></div>
+			<div id="priceright">分享有赏</div>
+			<div id="count"></div>
+			<p></p>
+			<div id="info">
+				<div>快递：0.00</div>  
+				<div>月销5432笔</div>
+				<div>河北师范大学</div>
+			</div>			    
+			<ul data-role='listview' style="margin-top: 5px;">
+				<li style="font-size: 20px;color: orangered;">淘抢购<span style="margin-left: 150px; font-size: 15px;color: gray;">限时抢购 疯狂抢购</span></li>
+				<li><a href="#">领取优惠券</a></li>
+				<li><a href="#">购买可获得相应积分</a></li>
+				<li><input type="text" name="text" id="text" placeholder="请输入需要购买的数量"/></li>
+			</ul>
+		</div>
+		<div data-role='footer' data-position='fixed'> 
+			<div data-role='navbar'>
+			<ul >
+				<li><a href="" data-icon="shop" style="color: orangered;">店铺</a></li>
+				<li><a href="" data-icon="phone">客服</a></li>
+				<li ><a href="" data-icon="back" data-rel="back">返回</a></li>
+				<a href="" id="add" data-role='button' style="height: 56px;font-size: 15px; line-height: 55px;background-color: orange;">加入购物车</a>				
+				<a href="" data-role='button' style="height: 56px;font-size: 15px; line-height: 55px;background-color: orangered;">立即购买</a>
+			</ul>
+			</div>
+		</div>
+	</body>
+<script src="js/detail.js"></script>
+</html>
